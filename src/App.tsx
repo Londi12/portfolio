@@ -9,14 +9,12 @@ import {
   FolderIcon,
   SparklesIcon,
   RocketLaunchIcon,
-  CommandLineIcon,
   ArrowTopRightOnSquareIcon,
   ChevronRightIcon
 } from '@heroicons/react/24/outline'
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('about')
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -402,8 +400,6 @@ const App: React.FC = () => {
                     ].map((skill) => (
                       <motion.div
                         key={skill.name}
-                        onHoverStart={() => setHoveredSkill(skill.name)}
-                        onHoverEnd={() => setHoveredSkill(null)}
                         whileHover={{ scale: 1.05 }}
                         className="bg-white/5 backdrop-blur-xl rounded-lg p-4 shadow-lg shadow-indigo-500/10 border border-white/10"
                       >

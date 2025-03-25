@@ -4,7 +4,6 @@ import {
   UserIcon, 
   BriefcaseIcon, 
   AcademicCapIcon, 
-  WrenchScrewdriverIcon,
   EnvelopeIcon,
   FolderIcon,
   SparklesIcon,
@@ -58,7 +57,6 @@ const App: React.FC = () => {
                 { id: 'experience', name: 'Experience', icon: BriefcaseIcon },
                 { id: 'projects', name: 'Projects', icon: FolderIcon },
                 { id: 'education', name: 'Education', icon: AcademicCapIcon },
-                { id: 'skills', name: 'Skills', icon: WrenchScrewdriverIcon },
                 { id: 'contact', name: 'Contact', icon: EnvelopeIcon },
               ].map((item) => (
                 <motion.button
@@ -379,44 +377,6 @@ const App: React.FC = () => {
                         </div>
                       </div>
                     </motion.div>
-                  </div>
-                </div>
-              )}
-
-              {activeSection === 'skills' && (
-                <div className="space-y-8">
-                  <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                    <WrenchScrewdriverIcon className="h-8 w-8 mr-3 text-indigo-400" />
-                    Skills
-                  </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {[
-                      { name: 'JavaScript', level: 90 },
-                      { name: 'React', level: 85 },
-                      { name: 'TypeScript', level: 80 },
-                      { name: 'Node.js', level: 85 },
-                      { name: 'Python', level: 75 },
-                      { name: 'SQL', level: 80 }
-                    ].map((skill) => (
-                      <motion.div
-                        key={skill.name}
-                        whileHover={{ scale: 1.05 }}
-                        className="bg-white/5 backdrop-blur-xl rounded-lg p-4 shadow-lg shadow-indigo-500/10 border border-white/10"
-                      >
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium text-white">{skill.name}</span>
-                          <span className="text-sm text-gray-400">{skill.level}%</span>
-                        </div>
-                        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${skill.level}%` }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="h-full bg-gradient-to-r from-indigo-500 to-purple-500"
-                          />
-                        </div>
-                      </motion.div>
-                    ))}
                   </div>
                 </div>
               )}

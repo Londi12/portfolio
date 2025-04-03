@@ -55,7 +55,7 @@ const App: React.FC = () => {
             opacity: isSidebarOpen ? 1 : 0
           }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className={`fixed lg:relative w-80 h-full bg-white/5 backdrop-blur-xl border-r border-white/10 p-8 flex flex-col z-40`}
+          className={`fixed lg:static w-80 h-full bg-white/5 backdrop-blur-xl border-r border-white/10 p-8 flex flex-col z-40 lg:z-0 lg:translate-x-0 lg:opacity-100`}
         >
           {/* Profile Section */}
           <div className="text-center mb-12">
